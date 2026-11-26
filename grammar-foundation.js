@@ -1417,7 +1417,7 @@
       <nav class="gf-links" aria-label="${escape(lessonId)} 文法重點">${topics.map((topic,i) => `<a href="#gf-${lessonId}-${i}" data-gf-jump="${i}">${escape(topic.title.split('：')[0])}</a>`).join('')}</nav>
       ${topics.map((topic,i) => card(topic,lessonId,i)).join('')}`;
     const lessonHeading = section.querySelector('h2');
-    if (lessonHeading) lessonHeading.after(panel);
+    section.append(panel);
     else section.prepend(panel);
     panel.addEventListener('click', event => {
       const jump = event.target.closest('[data-gf-jump]');

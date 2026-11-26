@@ -4930,7 +4930,7 @@
       <div class="sp-stage"></div>`;
     const foundation=section.querySelector('.gf-school');
     if(foundation)foundation.after(root);
-    else (section.querySelector('h2')||section).after(root);
+    else section.append(root);
     const state={mode:'patterns',indices:{},answers:{}};
     const stage=root.querySelector('.sp-stage');
     function activeCloze(){return lesson.cloze[state.mode==='workbook'?0:1]}
