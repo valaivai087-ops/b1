@@ -184,4 +184,6 @@
  const observer=new MutationObserver(decorate);observer.observe(observeRoot,{childList:true,subtree:true});draw();decorate();
  window.addEventListener('storage',e=>{if(e.key===KEY){try{const old=JSON.parse(e.newValue);if(old?.version===1){state=old;draw()}}catch{}}});
 })();
-</script></body></html>
+</script>
+<script defer src="./grammar-foundation.js?v=20261126"></script>
+</body></html>
